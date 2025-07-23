@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_x/mvvm%20asif%20%20taj/res/assets/image_assets.dart';
 import 'package:get_x/mvvm%20asif%20%20taj/res/colors/app%20colors.dart';
 import 'package:get_x/mvvm%20asif%20%20taj/res/localiation/languages.dart';
 import '../utils/utils.dart';
@@ -14,7 +15,13 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("splashScreenText".tr),),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image(image: ImageAssets.splashScreenImage),
+          Center(child: Text("splashScreenText".tr),),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(onPressed: (){
         Utils.toast("hello",AppColors.black);
         // throw InternetExceptions('Something went wrong');
