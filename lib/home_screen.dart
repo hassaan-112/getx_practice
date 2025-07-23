@@ -70,6 +70,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x/FavouriteScreen.dart';
+import 'package:get_x/gender%20predictor/screens/NameScreen.dart';
+import 'package:get_x/todo%20app/screens/HomeScreen.dart';
 import 'package:get_x/widgets/slider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -89,8 +91,19 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+
           title: Text("GetX",style: GoogleFonts.poppins(),),
           centerTitle: true,
+        ),
+        drawer: Drawer(
+          child:SafeArea(
+            child: Center(child: Column(
+              children: [
+                SizedBox(height: 50,),
+                Card(child: ListTile(title: Text("To Do list App",),onTap: (){Get.to(()=>THomescreen());},),),
+                Card(child: ListTile(title: Text("News app",),onTap: (){Get.to(()=>NewsScreen());},),)],
+            )),
+          )
         ),
         body: Column(
           children: [
