@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x/home_screen.dart';
+import 'package:get_x/mvvm%20asif%20%20taj/res/localiation/languages.dart';
 import 'package:get_x/mvvm%20asif%20%20taj/view/splashScreen.dart';
 import 'package:get_x/todo%20app/screens/HomeScreen.dart';
 
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      translations: Languages(),
+      locale: Locale("en","US"),
+      fallbackLocale:  Locale("en","US"),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
