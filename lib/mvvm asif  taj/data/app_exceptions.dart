@@ -13,3 +13,12 @@ class InternetExceptions extends AppExceptions{
 
   InternetExceptions([String ?message]):super(message,'No Internet : ');
 }
+
+class OtherExceptions extends AppExceptions{
+
+  OtherExceptions([String ?message]):super(message,'');
+}
+class BadRequestException extends AppExceptions{
+
+  BadRequestException([String ?message]):super(message,'');
+}
