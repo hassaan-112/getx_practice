@@ -3,4 +3,5 @@ class IconAssets{
 
 
   static const caravan ="$path/caravan-solid-full.svg";
+  static const debian ="$path/debian.svg";
 }

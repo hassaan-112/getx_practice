@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x/mvvm%20asif%20%20taj/repository/login_repository/loginRepository.dart';
 import '../utils/utils.dart';
+
 class LoginViewModel extends GetxController{
   final _api = LoginRepository();
   final emailController =TextEditingController().obs;
@@ -24,7 +25,9 @@ class LoginViewModel extends GetxController{
     }
       else{
         Utils.Scankbar("login", "login success");
-      // Utils.toast(value.toString(), Colors.green);
+        emailController.value.clear();
+        passwordController.value.clear();
+        Get.offAndToNamed("/homeScreen");
       }
     }).onError((error,stackTrace){
       isLoading.value=false;

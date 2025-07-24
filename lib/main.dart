@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_x/home_screen.dart';
 import 'package:get_x/mvvm%20asif%20%20taj/res/localiation/languages.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/view/splashScreen.dart';
-import 'package:get_x/todo%20app/screens/HomeScreen.dart';
+
 
 import 'mvvm asif  taj/res/routes/routes.dart';
 
@@ -23,6 +21,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        textTheme: TextTheme(
+          headlineSmall: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+          headlineMedium: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
+          headlineLarge: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+
+          titleSmall: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
+          titleMedium: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+          titleLarge: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
+
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       getPages: AppRoutes.appRoutes(),
