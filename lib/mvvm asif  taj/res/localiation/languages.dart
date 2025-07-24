@@ -4,7 +4,9 @@ class Languages extends Translations{
   @override
   Map<String, Map<String, String>> get keys => {
     "en_US":{
-      "splashScreenText":"This data is coming from localization folder"
+      "splashScreenText":"This data is coming from localization folder",
+      "login":"Login",
+      "email_hint":"Email",
     },
     "ur_PK":{
       "splashScreenText":"یہ ڈیٹا لوکلائزیشن فولڈر سے آ رہا ہے۔"

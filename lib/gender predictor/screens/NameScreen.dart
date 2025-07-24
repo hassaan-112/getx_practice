@@ -33,7 +33,7 @@ class _NewsScreenState extends State<NewsScreen> {
                   }
                   return null;
                 },
-                controller: predictionController.nameController,
+                controller: predictionController.nameController.value,
                 decoration: InputDecoration(hintText: "Enter your name"),
               ),
             ),
@@ -46,7 +46,7 @@ class _NewsScreenState extends State<NewsScreen> {
                       if (predictionController.formKey.currentState!
                           .validate()) {
                         predictionController.getPrediction();
-                        predictionController.nameController.clear();
+                        predictionController.nameController.value.clear();
                         FocusScope.of(context).unfocus();
                       }
                     },
