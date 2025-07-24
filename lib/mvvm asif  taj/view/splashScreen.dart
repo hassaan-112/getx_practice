@@ -26,8 +26,6 @@ class _SplashscreenState extends State<Splashscreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Image(image: ImageAssets.splashScreenImage, height: 100),
-          // SvgPicture.asset(IconAssets.caravan, height: 50),
           Center(child: Text("splashScreenText".tr)),
           Form(
             key: _formKey,
@@ -53,8 +51,10 @@ class _SplashscreenState extends State<Splashscreen> {
                     },
                     onSubmited: (value) {
                       Utils.fieldFocusChange(
-                          context, loginVM.emailFocusNode.value,
-                          loginVM.passwordFocusNode.value);
+                        context,
+                        loginVM.emailFocusNode.value,
+                        loginVM.passwordFocusNode.value,
+                      );
                     },
                   ),
                   const SizedBox(height: 20),
@@ -63,12 +63,13 @@ class _SplashscreenState extends State<Splashscreen> {
                     controller: loginVM.passwordController.value,
                     keyboardType: TextInputType.visiblePassword,
                     focusNode: loginVM.passwordFocusNode.value,
-                    onTapedOutside: (value){
+                    obscureText: loginVM.isObscure.value,
+                    onTapedOutside: (value) {
                       loginVM.passwordFocusNode.value.unfocus();
                     },
                     validator: (value) {
                       if (value!.isEmpty) {
-                        Utils.toast("Please enter password", AppColors.red);
+                        Utils.toast("Please enter   password", AppColors.red);
                         // return "Please enter password";
                       }
                       return null;
@@ -79,21 +80,23 @@ class _SplashscreenState extends State<Splashscreen> {
                       //     loginVM.emailFocusNode.value);
                     },
                   ),
-
                 ],
               ),
             ),
           ),
-          ButtonComponent(
-            text: "login".tr,
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-                Utils.toast("login Succesful", AppColors.black);
-              }
-            },
-            color: AppColors.black,
-            textColor: AppColors.white,
-            isLoading: false,
+          Obx(
+            () => ButtonComponent(
+              text: "login".tr,
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  loginVM.login();
+                  // Utils.toast("login Succesful", AppColors.black);
+                }
+              },
+              color: AppColors.black,
+              textColor: AppColors.white,
+              isLoading: loginVM.isLoading.value,
+            ),
           ),
         ],
       ),
