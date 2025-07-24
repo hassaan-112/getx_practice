@@ -11,6 +11,10 @@ class LoginViewModel extends GetxController{
   final emailFocusNode = FocusNode().obs;
   final passwordFocusNode = FocusNode().obs;
   RxBool isObscure = true.obs;
+
+
+
+
   void login() {
     isLoading.value=true;
     Map data={
@@ -27,7 +31,13 @@ class LoginViewModel extends GetxController{
         Utils.Scankbar("login", "login success");
         emailController.value.clear();
         passwordController.value.clear();
-        Get.offAndToNamed("/homeScreen");
+        _api.saveUser(value).then((value){
+          Utils.toast("user saved", Colors.green);
+          Get.offAndToNamed("/homeScreen");
+
+        }).onError((error,stackTrace){
+          Utils.toast("error    $error", Colors.red);
+        });
       }
     }).onError((error,stackTrace){
       isLoading.value=false;

@@ -5,15 +5,15 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get_x/mvvm%20asif%20%20taj/res/assets/IconAssets.dart';
 
-class Splashscreen extends StatefulWidget {
-  const Splashscreen({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<Splashscreen> createState() => _SplashscreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
 
-class _SplashscreenState extends State<Splashscreen> {
+class _SplashScreenState extends State<SplashScreen> {
   double turns =0.0;
   @override
   void initState() {
@@ -23,6 +23,7 @@ class _SplashscreenState extends State<Splashscreen> {
         turns += 1 / 4;
       });
     });
+
     Timer(Duration(seconds: 4), (){Get.offAndToNamed('/loginScreen');});
   }
   
