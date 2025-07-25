@@ -125,7 +125,19 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     )
-                  : Text(homeVM.error.value),
+                  :homeVM.error.value == "Time out"?Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Request time out"),
+                  ElevatedButton(
+                    onPressed: () {
+                      homeVM.rxStatus.value = Status.LOADING;
+                      homeVM.userList();
+                    },
+                    child: Text("try again"),
+                  ),
+                ],
+              ): Text(homeVM.error.value),
             );
         }
       }),

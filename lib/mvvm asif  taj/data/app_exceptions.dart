@@ -13,6 +13,10 @@ class InternetExceptions extends AppExceptions{
 
   InternetExceptions([String ?message]):super(message,'No Internet');
 }
+class TimeOutExceptions extends AppExceptions{
+
+  TimeOutExceptions([String ?message]):super(message,'Time out');
+}
 
 class OtherExceptions extends AppExceptions{
 
