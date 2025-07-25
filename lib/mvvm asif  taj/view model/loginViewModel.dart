@@ -45,5 +45,19 @@ class LoginViewModel extends GetxController{
     });
   }
 
-}
+
+  void is_logedIn()async {
+    final user = await _api.getUser();
+    if (user.accessToken != null) {
+      Get.offAndToNamed('/homeScreen');
+    }
+    else {
+      Get.offAndToNamed('/loginScreen');
+    }
+  }
+  void removeUser()async{
+    await _api.removeUser();
+  }
+
+  }
 

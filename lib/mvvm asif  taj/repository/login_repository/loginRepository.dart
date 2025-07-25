@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:get_x/mvvm%20asif%20%20taj/data/network/network_api_services.dart';
 import 'package:get_x/mvvm%20asif%20%20taj/res/urls/urls.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -19,7 +20,6 @@ class LoginRepository{
   }
   Future<UserToken> getUser()async{
     SharedPreferences sp =await SharedPreferences.getInstance();
-    // String? user = sp.getString("user");
     UserToken user = UserToken(accessToken: sp.getString("user"));
     return user;
   }
@@ -27,6 +27,9 @@ class LoginRepository{
     SharedPreferences sp =await SharedPreferences.getInstance();
     return sp.remove("user");
   }
+
+
+
 
 
 
