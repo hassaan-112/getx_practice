@@ -17,7 +17,7 @@ class UserDetail extends StatelessWidget {
         children: [
           Center(
             child: Container(
-              height: Get.height*.5,
+              height: Get.height*.6,
               width: Get.width*0.8,
               decoration: BoxDecoration(
                 color: Colors.amber.withValues(alpha: 0.05),
