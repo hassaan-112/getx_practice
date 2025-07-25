@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:get_x/mvvm%20asif%20%20taj/data/network/network_api_services.dart';
+import 'package:get_x/mvvm%20asif%20%20taj/models/Usermodel/UserListModel.dart';
 import 'package:get_x/mvvm%20asif%20%20taj/res/urls/urls.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -9,9 +10,13 @@ class LoginRepository{
   final _apiServices =NetworkApiServices();
 
   Future<dynamic> login(dynamic data) async {
-    final response= _apiServices.postApi(data,AppUrls.loginUrl);
+    final response=await _apiServices.postApi(data,AppUrls.loginUrl);
     return response;
   }
+
+
+
+
 
   Future<bool> saveUser(dynamic response)async{
     SharedPreferences sp =await SharedPreferences.getInstance();

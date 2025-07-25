@@ -11,7 +11,7 @@ class AppExceptions implements Exception{
 
 class InternetExceptions extends AppExceptions{
 
-  InternetExceptions([String ?message]):super(message,'No Internet : ');
+  InternetExceptions([String ?message]):super(message,'No Internet');
 }
 
 class OtherExceptions extends AppExceptions{

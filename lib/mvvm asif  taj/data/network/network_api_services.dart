@@ -15,7 +15,7 @@ class NetworkApiServices extends BaseApiServices{
       ResponseJson = ReturnResponse(responce);
     }
     on SocketException {
-      throw InternetExceptions('No Internet');
+      throw InternetExceptions("");
     }
     catch(e){
       throw OtherExceptions('Something went wrong $e');

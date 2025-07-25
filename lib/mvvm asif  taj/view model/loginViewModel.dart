@@ -5,9 +5,9 @@ import '../utils/utils.dart';
 
 class LoginViewModel extends GetxController{
   final _api = LoginRepository();
-  final emailController =TextEditingController().obs;
   final passwordController =TextEditingController().obs;
   RxBool isLoading = false.obs;
+  final emailController =TextEditingController().obs;
   final emailFocusNode = FocusNode().obs;
   final passwordFocusNode = FocusNode().obs;
   RxBool isObscure = true.obs;
