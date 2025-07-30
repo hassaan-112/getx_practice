@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/res/routes/route_names.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/view/DetailScreen.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/view/loginScreen.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/view/HomeScreen.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/view/splashScreen.dart';
+import 'package:get_x/mvvm/res/routes/route_names.dart';
+import 'package:get_x/mvvm/view/DetailScreen.dart';
+import 'package:get_x/mvvm/view/loginScreen.dart';
+import 'package:get_x/mvvm/view/HomeScreen.dart';
+import 'package:get_x/mvvm/view/splashScreen.dart';
 
 class AppRoutes {
   static appRoutes() => [

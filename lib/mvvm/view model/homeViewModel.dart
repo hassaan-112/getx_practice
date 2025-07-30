@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/models/Usermodel/UserListModel.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/repository/home_repository/homerepository.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/res/colors/app%20colors.dart';
+import 'package:get_x/mvvm/models/Usermodel/UserListModel.dart';
+import 'package:get_x/mvvm/repository/home_repository/homerepository.dart';
+import 'package:get_x/mvvm/res/colors/app%20colors.dart';
 
 import '../data/response/status.dart';
 import '../utils/utils.dart';

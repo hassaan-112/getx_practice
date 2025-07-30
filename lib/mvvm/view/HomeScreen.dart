@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/res/colors/app%20colors.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/res/components/buttonComponent.dart';
+import 'package:get_x/mvvm/res/colors/app%20colors.dart';
+import 'package:get_x/mvvm/res/components/buttonComponent.dart';
 
 import '../data/response/status.dart';
 import '../view model/homeViewModel.dart';
@@ -57,9 +57,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   "current page : ${homeVM.rxUserList.value.page.toString()}",
                 ),
                 SizedBox(
-                  width: Get.width ,
+                  width: Get.width,
                   height: Get.height * 0.65,
-                  child: Obx(()=>ListView.builder(
+                  child: Obx(
+                    () => ListView.builder(
                       itemCount: homeVM.rxUserList.value.data!.length,
                       itemBuilder: (BuildContext context, int index) {
                         return InkWell(
@@ -74,14 +75,19 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                   CircleAvatar(
                                     backgroundImage: NetworkImage(
-                                      homeVM.rxUserList.value.data![index].avatar
+                                      homeVM
+                                          .rxUserList
+                                          .value
+                                          .data![index]
+                                          .avatar
                                           .toString(),
                                     ),
                                     radius: Get.width * 0.08,
                                   ),
                                   SizedBox(width: Get.width * 0.05),
                                   Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         "First name  : ${homeVM.rxUserList.value.data![index].firstName.toString()}",
@@ -106,7 +112,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                Obx(()=> ButtonComponent(text: 'Refresh', onPressed: () { homeVM.userList();},isLoading: homeVM.sLoading.value,color: AppColors.black,textColor: AppColors.white,)),
+                Obx(
+                  () => ButtonComponent(
+                    text: 'Refresh',
+                    onPressed: () {
+                      homeVM.userList();
+                    },
+                    isLoading: homeVM.sLoading.value,
+                    color: AppColors.black,
+                    textColor: AppColors.white,
+                  ),
+                ),
               ],
             );
           case Status.ERROR:
@@ -125,19 +141,21 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     )
-                  :homeVM.error.value == "Time out"?Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Request time out"),
-                  ElevatedButton(
-                    onPressed: () {
-                      homeVM.rxStatus.value = Status.LOADING;
-                      homeVM.userList();
-                    },
-                    child: Text("try again"),
-                  ),
-                ],
-              ): Text(homeVM.error.value),
+                  : homeVM.error.value == "Time out"
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Request time out"),
+                        ElevatedButton(
+                          onPressed: () {
+                            homeVM.rxStatus.value = Status.LOADING;
+                            homeVM.userList();
+                          },
+                          child: Text("try again"),
+                        ),
+                      ],
+                    )
+                  : Text(homeVM.error.value),
             );
         }
       }),

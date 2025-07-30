@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/res/localiation/languages.dart';
-
-
-import 'mvvm asif  taj/res/routes/routes.dart';
+import 'package:get_x/mvvm/res/localiation/languages.dart';
+import 'mvvm/res/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());

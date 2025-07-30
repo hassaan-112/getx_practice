@@ -1,4 +1,4 @@
-import 'package:get_x/mvvm%20asif%20%20taj/data/response/status.dart';
+import 'package:get_x/mvvm/data/response/status.dart';
 
 import '../../data/network/network_api_services.dart';
 import '../../models/Usermodel/UserListModel.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/res/colors/app%20colors.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/res/components/TextFormFieldCommponent.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/res/components/buttonComponent.dart';
+import 'package:get_x/mvvm/res/colors/app%20colors.dart';
+import 'package:get_x/mvvm/res/components/TextFormFieldCommponent.dart';
+import 'package:get_x/mvvm/res/components/buttonComponent.dart';
 
 import '../utils/utils.dart';
 import '../view model/loginViewModel.dart';

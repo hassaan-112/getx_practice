@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/data/network/network_api_services.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/models/Usermodel/UserListModel.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/res/urls/urls.dart';
+import 'package:get_x/mvvm/data/network/network_api_services.dart';
+import 'package:get_x/mvvm/models/Usermodel/UserListModel.dart';
+import 'package:get_x/mvvm/res/urls/urls.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../models/Usermodel/userModel.dart';

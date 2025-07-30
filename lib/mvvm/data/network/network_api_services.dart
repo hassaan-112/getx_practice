@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:get_x/mvvm%20asif%20%20taj/data/network/base_api_services.dart';
+import 'package:get_x/mvvm/data/network/base_api_services.dart';
 import 'package:http/http.dart' as http;
 
 import '../app_exceptions.dart';

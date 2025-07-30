@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/res/assets/IconAssets.dart';
+import 'package:get_x/mvvm/res/assets/IconAssets.dart';
 
 import '../view model/loginViewModel.dart';
 

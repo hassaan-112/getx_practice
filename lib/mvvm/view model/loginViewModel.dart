@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_x/mvvm%20asif%20%20taj/repository/login_repository/loginRepository.dart';
+import 'package:get_x/mvvm/repository/login_repository/loginRepository.dart';
 import '../utils/utils.dart';
 
 class LoginViewModel extends GetxController{
